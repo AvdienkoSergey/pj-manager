@@ -9,9 +9,14 @@
   "scripts": {
     "start": "node main.js",
     "test": "npm run lint && tsc",
+    "test:github": "mocha test/integrations/github-api.test.js",
+    "test:token": "dotenv -- mocha test/unit/check-env-variables.test.js",
     "lint": "eslint . && prettier -c \"**/*.js\" \"**/*.ts\"",
     "fmt": "prettier --write \"**/*.js\" \"**/*.ts\"",
-    "prepare": "husky"
+    "prepare": "husky",
+    "release:bootstrap": "node ./bin/bootstrap.js",
+    "release:pr": "node ./bin/pr.js",
+    "release:github": "node ./bin/github.js"
   },
   "repository": {
     "type": "git",
@@ -36,11 +41,13 @@
   "devDependencies": {
     "@eslint/js": "^9.22.0",
     "@types/node": "^22.13.10",
+    "dotenv-cli": "^8.0.0",
     "eslint": "^9.22.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.5.0",
     "mocha": "^11.1.0",
     "prettier": "^3.5.3",
+    "release-please": "^17.0.0",
     "typescript": "^5.8.2"
   },
   "lint-staged": {
@@ -49,5 +56,8 @@
       "eslint --fix"
     ]
   },
-  "type": "module"
+  "type": "module",
+  "bin": {
+    "pjman": "./cmd/index.js"
+  }
 }
