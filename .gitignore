@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Build files
+dist/
+
+# Ignore all files in the temp directory
+temp/
+
+# Environment variables
+.env
+
+# Cache
+.npm
+.eslintcache
+
+# Editor directories and files
+.vscode/*
+
+# Logs
+logs
+*.log

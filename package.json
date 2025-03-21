@@ -1,0 +1,53 @@
+{
+  "name": "pj-manager",
+  "version": "1.0.0",
+  "description": "This project is a package management tool for JavaScript/Node.js applications. It helps developers manage their dependencies, analyze package usage, and perform operations like updating or uninstalling packages",
+  "main": "main.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "node main.js",
+    "test": "npm run lint && tsc",
+    "lint": "eslint . && prettier -c \"**/*.js\" \"**/*.ts\"",
+    "fmt": "prettier --write \"**/*.js\" \"**/*.ts\"",
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AvdienkoSergey/pj-manager.git"
+  },
+  "keywords": [
+    "package.json",
+    "managment",
+    "update",
+    "dependencies"
+  ],
+  "author": "AvdienkoSA",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AvdienkoSergey/pj-manager/issues"
+  },
+  "homepage": "https://github.com/AvdienkoSergey/pj-manager#readme",
+  "dependencies": {
+    "commander": "^13.1.0",
+    "ws": "^8.18.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.22.0",
+    "@types/node": "^22.13.10",
+    "eslint": "^9.22.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.0",
+    "mocha": "^11.1.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown",
+    "*.{js,ts,jsx,tsx}": [
+      "eslint --fix"
+    ]
+  },
+  "type": "module"
+}
