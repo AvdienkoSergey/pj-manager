@@ -51,7 +51,7 @@ export default [
           },
         },
       ],
-      'max-len': ['error', { code: 80, ignoreUrls: true }],
+      'max-len': ['error', { code: 120, ignoreUrls: true }],
       'max-nested-callbacks': ['error', { max: 7 }],
       'new-cap': [
         'error',

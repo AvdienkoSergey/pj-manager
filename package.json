@@ -8,9 +8,7 @@
   },
   "scripts": {
     "start": "node main.js",
-    "test": "npm run lint && tsc",
-    "test:github": "mocha test/integrations/github-api.test.js",
-    "test:token": "dotenv -- mocha test/unit/check-env-variables.test.js",
+    "test": "npm run lint && tsc && mocha \"**/*.test.js\"",
     "lint": "eslint . && prettier -c \"**/*.js\" \"**/*.ts\"",
     "fmt": "prettier --write \"**/*.js\" \"**/*.ts\"",
     "prepare": "husky",
