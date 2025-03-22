@@ -9,6 +9,7 @@
   "scripts": {
     "start": "node main.js",
     "test": "npm run lint && tsc && mocha \"**/*.test.js\"",
+    "test:single": "mocha ./test/unit/logger.test.js",
     "lint": "eslint . && prettier -c \"**/*.js\" \"**/*.ts\"",
     "fmt": "prettier --write \"**/*.js\" \"**/*.ts\"",
     "prepare": "husky",
