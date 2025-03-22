@@ -17,6 +17,7 @@ export default [
       reportUnusedDisableDirectives: true,
     },
     files: ['**/*.js', '**/*.ts'],
+    ignores: ['**/*.d.ts'],
     rules: {
       // Formatting rules
       indent: ['error', 2],
